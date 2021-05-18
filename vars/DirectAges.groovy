@@ -5,5 +5,5 @@ def call(String isDestroy) {
    }
 
 def destroy(String isDestroy) {
-   return call(destroy = isDestroy)
+   return call(isDestroy)
 }
