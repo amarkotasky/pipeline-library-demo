@@ -1,9 +1,11 @@
 #!/usr/bin/env groovy
 
-def call(String isDestroy) {
-      return isDestroy;
+
+def call(String variablesOverrides = "", String tfCliArgsInit = "", Boolean isDestroy = false) {
+ 
+      return variablesOverrides+tfCliArgsInit+"always"+isDestroy;
    }
 
-def destroy(String isDestroy) {
-   return call(isDestroy)
+def destroy() {
+   return call(isDestroy = true)
 }
